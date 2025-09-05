@@ -40,7 +40,7 @@ Key features:
 ---
 
 ## Tech Stack
-- **Data Storage & Warehousing**: MySQL, Hive, S3, Redshift
+- Data Storage & Warehousing</b>: MySQL, Hive, S3, Redshift
 - **Streaming & ETL**: AWS Kinesis, Spark, EMR, Python
 - **Orchestration**: Python scripts, Spark jobs
 - **Visualization**: Amazon QuickSight
