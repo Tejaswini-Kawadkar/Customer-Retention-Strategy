@@ -1,10 +1,10 @@
 # Customer-Retention-Strategy
 
 ````markdown
-# Customer Retention Strategy - Real-Time & Batch Analytics Pipeline
+Customer Retention Strategy - Real-Time & Batch Analytics Pipeline
 
-## Project Overview
-This project implements a **Customer Retention Analytics Pipeline** using a Lambda architecture to process CRM data in both **batch** and **real-time**. The pipeline enables ingestion, transformation, and visualization of customer cases and survey data, providing actionable insights into customer behavior and retention metrics.
+Project Overview
+This project implements a Customer Retention Analytics Pipeline using a Lambda architecture to process CRM data in both batch and real-time. The pipeline enables ingestion, transformation, and visualization of customer cases and survey data, providing actionable insights into customer behavior and retention metrics.
 
 Key features:
 - Batch ingestion from MySQL to Hive tables for static dimensions.
@@ -15,22 +15,22 @@ Key features:
 
 ---
 
-## Architecture & Data Flow
-1. **Data Sources**:
+Architecture & Data Flow
+1. Data Sources:
    - CRM transactional data stored in MySQL.
    - Case and survey data generated daily (historical & real-time).
 
-2. **Batch Processing**:
+2. Batch Processing:
    - Hive tables store historical and dimension datasets.
    - Data exported from Hive to S3 as Parquet/CSV files using Spark.
    - S3 data loaded into Redshift for analytics.
 
-3. **Real-Time Processing**:
-   - New case and survey events streamed to **AWS Kinesis**.
+3. Real-Time Processing:
+   - New case and survey events streamed to AWS Kinesis.
    - Spark Streaming (on EMR) consumes Kinesis streams.
    - Data written into Redshift fact tables (`case_table` & `survey_table`) with schema validation.
 
-4. **Visualization & Reporting**:
+4. Reporting:
    - Redshift queried to compute KPIs such as:
      - Total cases, open/closed cases, priority cases.
      - Positive/negative survey responses.
@@ -40,17 +40,17 @@ Key features:
 ---
 
 ## Tech Stack
-- Data Storage & Warehousing</b>: MySQL, Hive, S3, Redshift
-- **Streaming & ETL**: AWS Kinesis, Spark, EMR, Python
-- **Orchestration**: Python scripts, Spark jobs
-- **Visualization**: Amazon QuickSight
-- **File Formats**: JSON, CSV, Parquet
+- Data Storage & Warehousing: MySQL, Hive, S3, Redshift
+- Streaming & ETL: AWS Kinesis, Spark, EMR, Python
+- Orchestration: Python scripts, Spark jobs
+- Visualization: Amazon QuickSight
+- File Formats: JSON, CSV, Parquet
 
 ---
 
-## Setup & Execution
+Setup & Execution
 
-### 1. EC2 & MySQL Setup
+1. EC2 & MySQL Setup
 ```bash
 sudo yum update -y
 sudo yum install -y mysql-community-server
