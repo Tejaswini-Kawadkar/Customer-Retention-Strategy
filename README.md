@@ -39,11 +39,10 @@ Architecture & Data Flow
 
 ---
 
-## Tech Stack
+Tech Stack
 - Data Storage & Warehousing: MySQL, Hive, S3, Redshift
 - Streaming & ETL: AWS Kinesis, Spark, EMR, Python
 - Orchestration: Python scripts, Spark jobs
-- Visualization: Amazon QuickSight
 - File Formats: JSON, CSV, Parquet
 
 ---
